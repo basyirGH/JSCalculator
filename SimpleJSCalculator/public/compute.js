@@ -2,6 +2,7 @@
  * 
  */
 
+
 var str = ""; 
 document.getElementById(".").addEventListener("click", function(){printChar(".")});
 document.getElementById("+").addEventListener("click", function(){printChar("+")});
@@ -79,7 +80,10 @@ function solve() {
 		}
 	}
 	
-	if ((strOperand1 + strOperand2).includes(".")) {
+	if ((strOperand1 + strOperand2).includes(".") ||
+			strOperand1.includes(".") ||
+				strOperand2.includes(".")) {
+					
 		operand1 = parseFloat(strOperand1);
 		operand2 = parseFloat(strOperand2);
 	} else {
@@ -107,15 +111,14 @@ function solve() {
 	}
 	
 	if (solution != null) {
-		if (solution.toString.length  <= 16) {
+		if (solution.toString().length  <= 16) {
 			document.getElementById("solution").innerHTML = solution;
 		} else {
-			document.getElementById("solution").innerHTML = solution.toFixed(10);
+			document.getElementById("solution").innerHTML = solution.toFixed(15);
 		}
 	} else {
 		document.getElementById("solution").innerHTML = operand1;
 	}
-	str = "";
 
 }
 
