@@ -1,2 +1,2 @@
 # JSCalculator
-Basic 2-operands arithmetic calculator
+Basic 2-operands web arithmetic calculator
