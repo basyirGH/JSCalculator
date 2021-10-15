@@ -1,5 +1,6 @@
 /**
- * 
+ * AUTHOR Basyir Zainuddin
+ * PROJECT SimpleJSCalculator
  */
 
 
@@ -114,7 +115,7 @@ function solve() {
 		if (solution.toString().length  <= 16) {
 			document.getElementById("solution").innerHTML = solution;
 		} else {
-			document.getElementById("solution").innerHTML = solution.toFixed(15);
+			document.getElementById("solution").innerHTML = solution.toFixed(14);
 		}
 	} else {
 		document.getElementById("solution").innerHTML = operand1;
